@@ -1,7 +1,7 @@
-# Progamation
+# Programação
 ____
-Progamation class repository
+Repositório das Aulas de Programação
 ____
-# Repository Content
--JavaScript Learning;
-  -JavaScript activities;
+# Conteúdo do Repositório
+-Estudo de JavaScript;
+  -Atividades JavaScript;
