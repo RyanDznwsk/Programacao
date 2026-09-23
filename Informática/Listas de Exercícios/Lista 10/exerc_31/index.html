@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            text-align: center;
+            background: url(https://img.magnific.com/vetores-gratis/fundo-de-papel-desenhado-a-mao-com-revestimento-azul_23-2151105453.jpg?semt=ais_hybrid&w=740&q=80) no-repeat;
+            background-size: cover;
+        }
+        button {
+            display: inline-block;
+            position: relative;
+            padding: 320px 320px;
+            background-color: transparent;
+            clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+            background-size: cover;
+            cursor: pointer;
+            border: none;
+            overflow: hidden;
+        }
+        button::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: conic-gradient(#e93f25 0deg, #ea6a08 30deg, #ec771d 60deg, #33caef 110deg, #0db9e4 140deg, #167ce2 180deg, #0db9e4 220deg, #33caef 250deg, #ec771d 300deg, #ea6a08 330deg, #e93f25);
+            background-size: cover;
+            z-index: -1;
+            transform-origin: center;
+            animation: girarFundo 2s linear infinite;
+            animation-play-state: paused; 
+        }
+        button:hover::after {
+            animation-play-state: running;
+        }
+        @keyframes girarFundo {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        span {
+            font-size: 6rem;
+            background-image: linear-gradient(#167ce2, #0db9e4, #ea6a08, #e93f25);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 11</h1>
+    <div>
+        <button onclick="apresentar()">
+            <div>
+                <span>Botão</span>
+            </div>
+        </button>
+    </div>
+</body>
+</html>
