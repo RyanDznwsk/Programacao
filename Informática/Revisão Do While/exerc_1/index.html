@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisãos</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            background: url(https://digitalhub.fifa.com/transform/4e4717fc-7f87-4ea4-b989-7f5730ec94ae/General-Graphic-3840-x-2160-8) no-repeat;
+            background-size: cover;
+            color: #c59329;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            display: grid;
+            width: 50vw;
+            height: 50vw;
+            margin: auto;
+        }
+        .btn1 {
+            grid-column: 1 / span 2;
+        }
+        .btn2 {
+            grid-column: 1;
+            grid-row: 2;
+            text-align: left;
+        }
+        .btn3 {
+            grid-column: 2;
+            grid-row: 2;
+            text-align: right;
+        }
+        .btn4 {
+            grid-column: 1 / span 2;
+            grid-row: 3;
+        }
+        button.btn-vini {
+            margin: 20px;
+            padding: 70px 70px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            background: url(FotoVini.jpg) no-repeat center;
+            background-size: cover;
+            animation: pulse 2s ease-in-out infinite;
+            border-radius: 100%;
+            box-shadow: 0 0 20px #ac7928, 0 0 30px #cd974b, 0 0 50px #eccb9c;
+        }
+        button.btn-fink {
+            margin: 20px;
+            padding: 70px 70px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            background: url(FotoFink.jpg) no-repeat center;
+            background-size: cover;
+            animation: pulse 2s ease-in-out infinite;
+            border-radius: 100%;
+            box-shadow: 0 0 20px #ac7928, 0 0 30px #cd974b, 0 0 50px #eccb9c;
+        }
+        @keyframes pulse {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.5)}
+            100% {transform: scale(1);}
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 1</h1>
+    <div class="container">
+        <div class="btn1">
+            <button onclick="apresentar()" class="btn-vini"></button>
+        </div>
+        <div class="btn2">
+            <button onclick="apresentar()" class="btn-fink"></button>
+        </div>
+        <div class="btn3">
+            <button onclick="apresentar()" class="btn-fink"></button>
+        </div>
+        <div class="btn4">
+            <button onclick="apresentar()" class="btn-vini"></button>
+        </div>
+    </div>
+</body>
+</html>
