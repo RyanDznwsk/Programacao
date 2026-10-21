@@ -1,12 +1,16 @@
 function apresentar() {
-  let N;
-  while (isNaN(N)) {
-    N = parseInt(prompt("Digite o valor de N:"))
-    if (isNaN(N)) {
-      alert("Valor Inválido!");
+  let consumoTotal = 0;
+  for (let i = 1; i <= 5;) {
+    let consumo;
+    while (isNaN(consumo)) {
+      consumo = parseFloat(prompt(`Digite o consumo do dia ${i}:`));
+      if (isNaN(consumo)) {
+        alert("Valor Inválido");
+      }
     }
+    consumoTotal += consumo;
+    i++;
   }
-  for (let i = 1; i <= 10; i++) {
-    console.log(`${N} x ${i} = ${N * i}`);
-  }
+  let media = consumoTotal / 5;
+  alert(`A média de de consumo diário foi de ${media}Kwh \nO consumo total foi de ${consumoTotal}Kwh.`);
 }
