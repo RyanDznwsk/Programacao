@@ -1,6 +1,6 @@
 function apresentar() {
   let lotes = [];
-  let loteAcima1k = 0;
+  let lotesAcima1k = 0;
   let unidadesTotal = 0;
   for (let i = 1; i <= 10;) {
     let unidades;
@@ -10,12 +10,14 @@ function apresentar() {
         alert("Valor Inválido");
       }
     }
-    if (faturamento >= 1000) {
-      loteAcima1k++;
+    if (unidades >= 1000) {
+      lotesAcima1k++;
     }
     lotes.push(unidades);
     unidadesTotal += unidades;
     i++;
   }
-  alert(``);
+  let maior = Math.max(...lotes);
+  let posicaoMaior = lotes.indexOf(maior) + 1;
+  alert(`A produção total foi de ${unidadesTotal} unidades. \nHouveram ${lotesAcima1k} lotes com pelo menos 1000 unidades. \nO lote com mais unidades foi o ${posicaoMaior} com ${maior} unidades.`);
 }
